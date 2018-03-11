@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vigu Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/ajax.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Vigu Todo List</h1>
+      <div class="formContainer">
+        <form action="index.html" method="post" autocomplete="off">
+          <div class="row">
+            <div class="form-element-container width-desktop-75 width-mobile">
+                <input type="text" class="addItemInput" name="item" value="" placeholder="Add Item..." required autofocus>
+            </div>
+            <div class="form-element-container width-desktop-25 width-mobile">
+              <button type="submit" class="addItemSubmitButton" name="addItemSubmitButton">Add Item</button>
+            </div>
+          </div>
+        </form>
+        <ul>
+          <% for(var i=0; i < data.length; i++) { %>
+            <li> <%= data[i].item %> </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
